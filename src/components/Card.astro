@@ -1,0 +1,11 @@
+---
+const { num } = Astro.props
+
+const className = 'w-full h-full rounded-xl'
+---
+
+{()=>{
+  if (num === 5) return <video class={className} src={`${num}.mp4`} controls />
+  else if (num === 4) return <img class={className} src={`${num}.jpg`} alt='Image Girl' />
+  return <img class={className} src={`${num}.png`} alt='Image Girl' />
+}}
